@@ -1,0 +1,45 @@
+<div class="card">
+    <div class="card-body">
+        <form action="/advogados/cadastrarprocessos" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="numeroProcesso">Número do processo:</label>
+                <input type="text" id="numeroProcesso" name="numeroProcesso" class="form-control" style="width: 300px;">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="cliente">Cliente:</label>
+                <input type="text" id="cliente" name="cliente" class="form-control" style="width: 300px;" >
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="advogado">Advogado(a):</label>
+                <input type="text" id="advogado" name="advogado" class="form-control" style="width: 300px;" >
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="tema">Tema:</label>
+                <input type="text" id="tema" name="tema" class="form-control" style="width: 300px;" >
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="descricao">Descrição do caso:</label>
+                <textarea id="descricao" name="descricao" class="form-control" style="width: 300px; height: 150px;" ></textarea>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="valorCausa">Valor da causa:</label>
+                <input type="text" id="valorCausa" name="valorCausa" class="form-control" style="width: 300px;" >
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="documento">Documentos:</label>
+                <input type="file" id="documento" name="documento" class="form-control-file" multiple>
+            </div>
+            <br>
+            <div class="form-group">
+                <button type="submit" class="botao-azul">Cadastrar processo</button>
+            </div>
+        </form>
+    </div>
+</div>
+

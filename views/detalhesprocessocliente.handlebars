@@ -1,0 +1,15 @@
+<h1>Detalhes do Processo</h1>
+<p>Número do Processo: {{processo.numeroProcesso}}</p>
+<p>Tema: {{processo.tema}}</p>
+<p>Descrição: {{processo.descricao}}</p>
+<p>Valor da Causa: {{processo.valorCausa}}</p>
+<p>Advogado: {{processo.advogado.nome}}</p>
+<h3>Documentos:</h3>
+<ul>
+    {{#each processo.documentos}}
+        <li>{{this.nome}}</li>
+    {{/each}}
+</ul>
+<br>
+
+<a href="/clientes/meusprocessos"><button class="botao-azul">Voltar para Meus Processos</button></a>

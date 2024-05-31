@@ -3,12 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Controle de Estoque</title>
+    <title>Gerenciador de Processos Judiciais</title>
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     {{> navbar}}
     <div class="container">
+        <!-- Mensagens de erro geral -->
+        {{#if error_msg}}
+            <div class="alert alert-danger">{{error_msg}}</div>
+        {{/if}}
+
+        <!-- Mensagens de sucesso -->
+        {{#if success_msg}}
+            <div class="alert alert-success">{{success_msg}}</div>
+        {{/if}}
+
+        <!-- Mensagens de erros de validação -->
+        {{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+        {{/if}}
+
+        <!-- Conteúdo principal -->
         {{{body}}}
     </div>
 </body>

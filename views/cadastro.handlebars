@@ -1,0 +1,64 @@
+<div class="spacer"></div> 
+
+<div class="card">
+    <div class="card-body">
+        <h1>Crie sua conta:</h1>
+        <br>
+        <form id="registroForm" action="/clientes/registrocliente" method="post">
+            <div class="form-group">
+                <label for="tipo">Tipo de conta:</label>
+                <select name="tipo" id="escolha" required>
+                    <option value="cliente">Cliente</option>
+                    <option value="advogado">Advogado</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="senha2">Repita sua senha:</label>
+                <input type="password" id="senha2" name="senha2" required>
+            </div>
+            <br>
+            <button type="submit" class="botao-azul">Criar conta</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById('escolha').addEventListener('change', function () {
+        console.log('Tipo de conta selecionado:', this.value); 
+        if (this.value === 'advogado') {
+            window.location.href = '/advogados/registroadvogado';
+        } else {
+            var oabField = document.getElementById('oab-field');
+            oabField.style.display = 'none';
+        }
+    });
+</script>
+
+
+
+
+
+
+
+

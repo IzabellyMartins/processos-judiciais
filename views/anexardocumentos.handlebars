@@ -1,0 +1,10 @@
+<h1>Anexar Documentos ao Processo:</h1>
+<form action="/clientes/processo/{{processo._id}}/anexar" method="POST" enctype="multipart/form-data">
+    <div>
+        <label for="documentos">Selecione os documentos:</label>
+        <input type="file" name="documento" multiple required>
+    </div>
+    <button type="submit">Anexar Documentos</button>
+</form>
+<br>
+<a href="/clientes/meusprocessos"><button class="botao-azul">Voltar para Meus Processos</button></a>

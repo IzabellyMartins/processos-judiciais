@@ -4,18 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif; 
 }
 
 body {
-  min-height: 100vh;
-  background: url('/assets/fundo.jpg') no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding-top: 80px;
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
+  padding-top: 80px; 
 }
 
 .header {
@@ -23,19 +16,36 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 100px;
-  background: transparent;
+  padding: 10px 90px;
+  background: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
-  font-size: 32px;
-  color: #fff;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  font-weight: 700;
+}
+
+.logo-img {
+  max-height: 60px; 
+  max-width: 60px; 
+  vertical-align: middle; 
+  margin-right: 10px; 
+}
+
+.logo-text {
+  font-size: 18px; 
+  color: #fff; 
+  font-weight: 500; 
 }
 
 .navbar a {
@@ -63,25 +73,130 @@ body {
 }
 
 .container {
-  max-width: 800px; 
-  background: rgba(255, 255, 255, 0.8); 
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.8);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.botao-bege {
-    background-color: #d2b48c; 
-    color: #000; 
-    border: none; 
-    padding: 10px 20px; 
-    font-size: 16px; 
-    cursor: pointer; 
-    border-radius: 4px; 
-    transition: background-color 0.3s;
-    text-decoration: none; 
-    display: inline-block; 
+  margin-bottom: 20px; 
+  margin: 0 auto; 
 }
 
-.botao-bege:hover {
-    background-color: #e6e6cc; 
+.botao-azul {
+  background-color: #66b2ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.botao-azul:hover {
+  background-color: #4d94ff;
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.spacer {
+  margin: 20px auto;
+}
+
+.jumbotron {
+  border: 2px solid #000; 
+  padding: 20px; 
+  text-align: center; 
+}
+
+.jumbotron-content {
+  text-align: center;
+}
+
+.card {
+  border: 2px solid #000; 
+  border-radius: 8px; 
+  padding: 20px; 
+  max-width: 400px; 
+}
+
+
+.dashboard {
+  background-color: #fff; 
+}
+
+.dashboard .navbar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dashboard .navbar ul li {
+  margin-bottom: 10px;
+}
+
+.dashboard .navbar ul li a {
+  display: block;
+  background-color: #66b2ff; 
+  color: #000; 
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.dashboard .navbar ul li a:hover {
+  background-color: #4d94ff; 
+}
+
+.botao-verde {
+  background-color: #78ab7f; 
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.botao-vermelho {
+  background-color: #c27775; 
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.botao-verde:hover {
+  background-color: #2f5d39; 
+}
+
+.botao-vermelho:hover {
+  background-color: #a3625f; 
 }

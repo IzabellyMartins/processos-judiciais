@@ -1,0 +1,17 @@
+<h1>Meus Processos:</h1>
+<ul>
+    {{#if processos.length}}
+        {{#each processos}}
+            <li>
+                <p>Número do Processo: {{this.numeroProcesso}}</p>
+                <p>Advogado: {{this.advogado.nome}}</p>
+                <a href="/clientes/processo/{{this._id}}"><button class="botao-azul">Ler mais</button></a>
+                <a href="/clientes/processo/{{this._id}}/anexar"><button class="botao-azul">Anexar Documentos</button></a>
+            </li>
+        {{/each}}
+    {{else}}
+        <p>Você não possui processos.</p>
+    {{/if}}
+</ul>
+<br>
+<a href="/clientes/clientedashboard"><button class="botao-azul">Voltar ao Menu</button></a>

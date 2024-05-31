@@ -1,0 +1,20 @@
+<h2>Detalhes do Processo</h2>
+<hr>
+<div>
+    <h3>Cliente: {{processo.cliente.nome}}</h3>
+    <p>Número do Processo: {{processo.numeroProcesso}}</p>
+    <p>Advogado: {{processo.advogado.nome}}</p>
+    <p>Tema: {{processo.tema}}</p>
+    <p>Valor da Causa: {{processo.valorCausa}}</p>
+    <p>Descrição: {{processo.descricao}}</p>
+    <h4>Documentos:</h4>
+    {{#each processo.documentos}}
+    <div>
+        <p>{{nome}}</p>
+
+    </div>
+    {{/each}}
+</div>
+<hr>
+<br>
+<a href="/advogados/verprocessosseparados" class="botao-azul">Voltar</a>

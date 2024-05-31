@@ -1,0 +1,20 @@
+<h2>Lista de Processos: </h2>
+<hr>
+
+{{#if nenhumProcesso}}
+    <p>Nenhum processo cadastrado!</p>
+{{else}}
+    {{#each processos}}
+    <div>
+        <h3>Cliente: {{cliente.nome}}</h3>
+        <p>Número do Processo: {{numeroProcesso}}</p>
+    </div>
+    <a href="/advogados/processo/{{_id}}"><button class="botao-azul">Ler Mais</button></a>
+    <a href="/advogados/verprocessosseparados/edit/{{_id}}"><button class="botao-verde">Editar processo</button></a>
+    <a href="/advogados/verprocessosseparados/delete/{{_id}}"><button class="botao-vermelho">Excluir processo</button></a>
+    <br>
+    {{/each}}
+{{/if}}
+<br>
+<a href="/advogados/cadastrarprocessos"><button class="botao-azul">Novo Processo</button></a>
+<a href="/advogados/advogadodashboard"><button class="botao-azul">Dashboard</button></a>

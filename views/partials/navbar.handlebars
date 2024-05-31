@@ -1,8 +1,18 @@
 <header class="header">
-  <a href="/inicio" class="logo">Logo</a>
+  <div class="logo-container">
+    <a href="/" class="logo"> 
+      <img src="/assets/logo.png" alt="Logo" class="logo-img">
+      <span class="logo-text">Gerenciador de Processos Judiciais</span>
+    </a>
+  </div>
   <nav class="navbar">
-    <a href="/inicio">Início</a>
-    <a href="#">Entrar</a>
-    <a href="#">Sobre</a>
+    <a href="/">Início</a>
+    {{#if isAuthenticated}}
+      <a href="/advogados/logout">Sair</a>
+    {{/if}}
+    <a href="/sobre">Sobre</a>
   </nav>
 </header>
+
+
+

@@ -1,0 +1,22 @@
+<h2>Processos do Advogado {{advogado.nome}}</h2>
+<ul>
+    {{#each processos}}
+        <li>
+            <strong>Número do Processo:</strong> {{this.numeroProcesso}} <br>
+            <strong>Cliente:</strong> {{this.cliente.nome}} <br>
+            <strong>Advogado:</strong> {{this.advogado.nome}} <br>
+            <strong>Tema:</strong> {{this.tema}} <br>
+            <strong>Descrição:</strong> {{this.descricao}} <br>
+            <strong>Valor da Causa:</strong> {{this.valorCausa}} <br>
+            <strong>Documentos:</strong> 
+            <ul>
+                {{#each this.documentos}}
+                    <li>{{this.nome}}</li>
+                {{/each}}
+            </ul>
+        </li>
+    {{/each}}
+</ul>
+<hr>
+<br>
+<a href="/advogados/outrosprocessos" class="botao-azul">Voltar</a>

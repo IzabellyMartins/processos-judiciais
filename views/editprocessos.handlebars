@@ -1,0 +1,81 @@
+<div class="card">
+    <div class="card-body">
+        <h4>Editar Processo: </h4>
+        <form action="/advogados/verprocessosseparados/edit/{{processo._id}}" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="hidden" value="{{processo._id}}" name="id">
+                <label for="numeroProcesso">Número do processo:</label>
+                <input type="text" id="numeroProcesso" name="numeroProcesso" class="form-control" style="width: 300px;" value="{{processo.numeroProcesso}}">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="cliente">Cliente:</label>
+                <input type="text" id="cliente" name="cliente" class="form-control" style="width: 300px;" value="{{processo.cliente.nome}}">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="advogado">Advogado(a):</label>
+                <input type="text" id="advogado" name="advogado" class="form-control" style="width: 300px;" value="{{processo.advogado.nome}}">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="tema">Tema:</label>
+                <input type="text" id="tema" name="tema" class="form-control" style="width: 300px;" value="{{processo.tema}}">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="descricao">Descrição do caso:</label>
+                <textarea id="descricao" name="descricao" class="form-control" style="width: 300px; height: 150px;">{{processo.descricao}}</textarea>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="valorCausa">Valor da causa:</label>
+                <input type="text" id="valorCausa" name="valorCausa" class="form-control" style="width: 300px;" value="{{processo.valorCausa}}">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="documento">Documentos (PDF):</label>
+                <input type="file" id="documento" name="documento" class="form-control-file" multiple>
+                <ul>
+                    {{#each processo.documentos}}
+                        <li>
+                            {{this.originalName}} 
+                            <a href="#" onclick="removerDocumento('{{../processo._id}}', '{{this._id}}')">Remover</a>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+            <br>
+            <div class="form-group">
+                <button type="submit" class="botao-azul">Editar processo</button>
+                <a href="/advogados/verprocessosseparados" class="botao-azul">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script>
+    function removerDocumento(processoId, documentoId) {
+        if (confirm("Tem certeza que deseja remover este documento?")) {
+            fetch(`/advogados/verprocessosseparados/delete-doc/${processoId}/${documentoId}`, {
+                method: 'DELETE'
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Documento removido com sucesso');
+                    // Recarregar a página após a remoção bem-sucedida
+                    window.location.reload();
+                } else {
+                    alert('Erro ao remover documento');
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao remover documento:', error);
+                alert('Erro ao remover documento');
+            });
+        }
+    }
+</script>
+
+

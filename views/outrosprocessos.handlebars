@@ -1,0 +1,11 @@
+<h1>Advogados: </h1>
+<hr>
+{{#each advogados}}
+    <div class="advogado-container">
+        <h3>{{this.nome}}</h3>
+        <a href="/advogados/outrosprocessos/{{this._id}}/processos" class="botao-azul">Ver processos</a>
+    </div>
+{{/each}}
+<hr>
+<br>
+<a href="/advogados/advogadodashboard" class="botao-azul">Voltar ao Dashboard</a>
