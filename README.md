@@ -21,7 +21,7 @@
 <p>📌Logar</p>
 <br>
 <p><strong>🛠Instação e execução da API</strong></p>
-<p>➡️Certifique-se de ter instalado em sua máquina o MongoDB Database Server, em caso de falta, segue o link oficial para donwload(atualizado): 🔗https://www.mongodb.com/try/download/community</p>
+<p>➡️Certifique-se de ter instalado em sua máquina o MongoDB Database Server e aberto, em caso de falta, segue o link oficial para donwload(atualizado): 🔗https://www.mongodb.com/try/download/community</p>
 <p>➡️Segundo passo, clonar o repositório do projeto para o seu ambiente local.</p>
 <p>➡️Abra a pasta geral do projeto no seu terminal e execute o comando: "npm install" para instalar todas as dependências do package.json.</p>
 <p>➡️Para rodar a api, abra a pasta "src" contida dentro da pasta geral do projeto, e execute o arquivo "index.js" dentro dela com o comando: "nodemon index.js".</p>
