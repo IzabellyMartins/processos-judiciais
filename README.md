@@ -27,6 +27,4 @@
 <p>➡️Para rodar a api, abra a pasta "src" contida dentro da pasta geral do projeto, e execute o arquivo "index.js" dentro dela com o comando: "nodemon index.js".</p>
 <p>➡️Por fim, ele vai te retornar a url onde a api está rodando, agora a api está pronta para ser explorada! 🚀</p>
 <br>
-<p><strong>🗃Diagrama entidade relacionamento do banco de dados:</strong></p>
-![ER](https://github.com/IzabellyMartins/ProcessosJudiciais/assets/92327712/22449cb4-33ad-42cb-b9c4-e4db7169893b)
 
