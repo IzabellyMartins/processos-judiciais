@@ -1,5 +1,8 @@
 <p>⚙️ <strong>Bem-vindo(a) ao Gerenciador de Processos Judiciais!</strong> 🏛️</p>
 <br>
+
+![API IMAGEM](https://i.imgur.com/jNAEOpP.png)
+
 <p>🚀Esta Api foi criada com o intuito de agilizar os processos no setor público, 
     oferecendo uma solução simples e intuitiva para a gestão de processos judiciais.</p>
 <br>
